@@ -84,9 +84,9 @@ export default function loader(content) {
       this.emitFile(outputManifestPath, manifest);
       return callback(null, exportStatement);
     });
+  } else {
+    return callback(null, exportStatement);
   }
-
-  return callback(null, exportStatement);
 }
 
 export const raw = true;
