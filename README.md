@@ -9,6 +9,7 @@
   <a href="https://github.com/webpack/webpack">
     <img width="200" height="200"
       src="https://webpack.js.org/assets/icon-square-big.svg">
+    <img width="600" src="https://d33wubrfki0l68.cloudfront.net/3c934afefb2da5f35adefb52716ba9cc9ffa37ab/061c6/img/layout/logo-babylonjs-v3.svg" alt="BabylonJS">
   </a>
   <h1>Babylon File Loader</h1>
   <p>Instructs webpack to emit the required object as a file and an accompanying manifest (if it exists)  and to return the file's public URL. This loader is based on the <a href="https://github.com/webpack-contrib/file-loader">official webpack file-loader</a> so it can handle other files than <code>.babylon</code> as well.</p>
