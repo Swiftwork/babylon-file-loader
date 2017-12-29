@@ -2,7 +2,7 @@
   "name": "babylon-file-loader",
   "version": "0.2.0",
   "author": "Erik Hughes @swiftwork",
-  "description": "babylon file loader module for webpack forked from @sorka file loader",
+  "description": "Babylon file loader module for webpack forked from @sorka file loader",
   "license": "MIT",
   "engines": {
     "node": ">= 4.3 < 5.0.0 || >= 5.10"

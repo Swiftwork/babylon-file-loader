@@ -1,0 +1,45 @@
+{
+  "producer": {
+    "name": "blender",
+    "version": "2",
+    "exporter_version": "0.4.5",
+    "file": "without-manifest.babylon"
+  },
+  "autoClear": true,
+  "clearColor": [
+    0,
+    0,
+    0
+  ],
+  "ambientColor": [
+    0,
+    0,
+    0
+  ],
+  "fogMode": 0,
+  "fogColor": null,
+  "fogStart": 0,
+  "fogEnd": 0,
+  "fogDensity": 0,
+  "gravity": [
+    0,
+    0,
+    0
+  ],
+  "physicsEngine": null,
+  "physicsEnabled": false,
+  "physicsGravity": null,
+  "lights": [],
+  "meshes": [],
+  "sounds": [],
+  "materials": [],
+  "multiMaterials": [],
+  "particleSystems": null,
+  "lensFlareSystems": null,
+  "shadowGenerators": [],
+  "skeletons": [],
+  "actions": null,
+  "metadata": null,
+  "workerCollisions": false,
+  "morphTargetManagers": null
+}

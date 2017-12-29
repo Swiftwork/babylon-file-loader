@@ -1,4 +1,4 @@
 /* eslint-disable */
-import png from './file.png';
+import babylon from './with-manifest.babylon';
 
-export default png;
+export default babylon;

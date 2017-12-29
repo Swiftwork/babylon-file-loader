@@ -7,7 +7,7 @@ describe('Loader', () => {
   test('Defaults', async () => {
     const config = {
       loader: {
-        test: /(png|jpg|svg)/,
+        test: /\.babylon$/,
         options: {},
       },
     };

@@ -8,7 +8,7 @@ describe('Options', () => {
     test('this.options.context', async () => {
       const config = {
         loader: {
-          test: /(png|jpg|svg)/,
+          test: /\.babylon$/,
           options: {
             useRelativePath: true,
           },
@@ -24,7 +24,7 @@ describe('Options', () => {
     test('options.context', async () => {
       const config = {
         loader: {
-          test: /(png|jpg|svg)/,
+          test: /\.babylon$/,
           options: {
             context: '/relative/',
             useRelativePath: true,

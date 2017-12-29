@@ -8,7 +8,7 @@ describe('Options', () => {
     test('{String}', async () => {
       const config = {
         loader: {
-          test: /(png|jpg|svg)/,
+          test: /\.babylon$/,
           options: {
             context: `${__dirname}`,
           },

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Errors Loader Error 1`] = `
-"File Loader
+"Babylon File Loader
 
 emitFile is required from module system"
 `;
@@ -9,7 +9,7 @@ emitFile is required from module system"
 exports[`Errors Validation Error 1`] = `
 "Validation Error
 
-File Loader Invalid Options
+Babylon File Loader Invalid Options
 
 options.useRelativePath should be boolean
 "

@@ -1,16 +1,18 @@
+import fs from 'fs';
 import path from 'path';
 import loaderUtils from 'loader-utils';
 import validateOptions from 'schema-utils';
 import schema from './options.json';
 
 export default function loader(content) {
-  if (!this.emitFile) throw new Error('File Loader\n\nemitFile is required from module system');
+  if (!this.emitFile) throw new Error('Babylon File Loader\n\nemitFile is required from module system');
 
   const options = loaderUtils.getOptions(this) || {};
 
-  validateOptions(schema, options, 'File Loader');
+  validateOptions(schema, options, 'Babylon File Loader');
 
-  const context = options.context || this.rootContext || this.options && this.options.context
+  const context = options.context || this.rootContext || (this.options && this.options.context);
+  const callback = this.async();
 
   let url = loaderUtils.interpolateName(this, options.name, {
     context,
@@ -62,11 +64,29 @@ export default function loader(content) {
     );
   }
 
+  const exportStatement = `module.exports = ${publicPath};`;
+
   if (options.emitFile === undefined || options.emitFile) {
     this.emitFile(outputPath, content);
+
+    // load the optional manifest file
+    fs.readFile(`${this.resourcePath}.manifest`, (err, manifest) => {
+      if (err) return callback(null, exportStatement);
+
+      const indexExtension = outputPath.indexOf('.babylon');
+      if (indexExtension < 0) return callback(null, exportStatement);
+
+      // add the manifest extension to the output file path
+      const outputManifestPath = `${outputPath.slice(0, indexExtension + 8)}.manifest${outputPath.slice(indexExtension + 8)}`;
+
+      // ensure Webpack knows that the manifest is an optional dependency
+      if (this.dependency) this.dependency(`${this.resourcePath}.manifest`);
+      this.emitFile(outputManifestPath, manifest);
+      return callback(null, exportStatement);
+    });
   }
-  // TODO revert to ES2015 Module export, when new CSS Pipeline is in place
-  return `module.exports = ${publicPath};`;
+
+  return callback(null, exportStatement);
 }
 
 export const raw = true;
