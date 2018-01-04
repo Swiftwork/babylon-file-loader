@@ -3,7 +3,6 @@
 [![deps][deps]][deps-url]
 [![tests][tests]][tests-url]
 [![coverage][cover]][cover-url]
-[![chat][chat]][chat-url]
 
 <div align="center">
   <a href="https://github.com/webpack/webpack">
@@ -287,14 +286,11 @@ path/to/scene.babylon.manifest?e43b20c069c4a01867c31e98cbce33c9
 [node]: https://img.shields.io/node/v/babylon-file-loader.svg
 [node-url]: https://nodejs.org
 
-[deps]: https://david-dm.org/webpack-contrib/babylon-file-loader.svg
-[deps-url]: https://david-dm.org/webpack-contrib/babylon-file-loader
+[deps]: https://david-dm.org/Swiftwork/babylon-file-loader.svg
+[deps-url]: https://david-dm.org/Swiftwork/babylon-file-loader
 
-[tests]: http://img.shields.io/travis/webpack-contrib/babylon-file-loader.svg
-[tests-url]: https://travis-ci.org/webpack-contrib/babylon-file-loader
+[tests]: http://img.shields.io/travis/Swiftwork/babylon-file-loader.svg
+[tests-url]: https://travis-ci.org/Swiftwork/babylon-file-loader
 
-[cover]: https://img.shields.io/codecov/c/github/webpack-contrib/babylon-file-loader.svg
-[cover-url]: https://codecov.io/gh/webpack-contrib/babylon-file-loader
-
-[chat]: https://badges.gitter.im/webpack/webpack.svg
-[chat-url]: https://gitter.im/webpack/webpack
+[cover]: https://img.shields.io/codecov/c/github/Swiftwork/babylon-file-loader.svg
+[cover-url]: https://codecov.io/gh/Swiftwork/babylon-file-loader
